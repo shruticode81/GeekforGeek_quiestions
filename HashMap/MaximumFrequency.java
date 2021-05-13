@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 public class MaximumFrequency {
-    public static void frequency(int arr[]){
+    public static int frequency(int arr[]){
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int i=0;i<arr.length;i++){
             if(map.containsKey(arr[i])){
@@ -31,7 +31,16 @@ public class MaximumFrequency {
            }
            return;
        }
-        
+       //another way to find maximum is:
+       int max =0;
+       int ans = Integer.MIN_VALUE;
+       for(int i:arr){
+           if(map.get(i)>max){
+               max = map.get(i);
+               ans =i;
+           }
+       }
+        return ans;
     }
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
@@ -41,6 +50,7 @@ public class MaximumFrequency {
             arr[i]=s.nextInt();
 
         }
-        frequency(arr);
+        int result = frequency(arr);
+        System.out.println(result);
     }
 }
