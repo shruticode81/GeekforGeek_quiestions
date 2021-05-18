@@ -1,4 +1,5 @@
 //code to print common elements in two given array
+//Approach:1
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.ArrayList;
