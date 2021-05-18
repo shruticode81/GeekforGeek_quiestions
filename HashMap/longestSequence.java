@@ -45,7 +45,7 @@ public class longestSequence {
         int n = s.nextInt();
         int arr[] = new int[n];
         for(int i=0;i<n;i++){
-            arr[i]=s.nextInt();
+            arr[i]=s.nextInt();+
         }
         ArrayList<Integer> res= findSequence(arr);
         for(int i=0;i<res.size();i++){
